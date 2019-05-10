@@ -1,3 +1,10 @@
+body {
+  font-size: 14px;
+  background-color: #fff;
+  color: #333;
+  letter-spacing: 1px;
+}
+
 .image-header {
   width: 100%;
 }
@@ -63,4 +70,104 @@
 
 .about-img {
   max-width: 100%;
+}
+
+.skills-section {
+  background-color: black;
+  color: white;
+}
+
+.language,
+.language-about {
+  color: white;
+}
+
+h4.language {
+  margin-top: 10px;
+}
+
+.skill {
+  text-align: center;
+  margin-left: 10px;
+}
+
+.chart {
+  position: relative;
+  width: 152px;
+  height: 152px;
+  display: inline-block;
+  text-align: center;
+}
+
+canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.percent {
+  line-height: 152px;
+  display: inline-block;
+  font-size: 35px;
+}
+
+.text-center > p {
+  margin-bottom: 3rem;
+}
+
+.percent:after {
+  content: "%";
+}
+
+.square-item {
+  margin-top: 30px;
+  position: relative;
+}
+
+.square-inner-container {
+  position: relative;
+  padding: 50px 15px 35px;
+  text-align: center;
+  border: 2px solid black;
+  border-top: none;
+}
+
+.square-inner-container::before,
+.square-inner-container::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  width: 30%;
+  border-bottom: 2px solid black;
+}
+
+.square-inner-container::before {
+  right: 0px;
+}
+
+.square-inner-container::after {
+  left: 0px;
+}
+
+.square-content h2 {
+  font-size: 56px;
+  margin-bottom: 10px;
+  font-weight: 400px;
+  color: #e600e6;
+}
+
+.square-content h3 {
+  font-size: 13px;
+  font-weight: 600px;
+  margin: 0;
+}
+
+.fa {
+  position: absolute;
+  left: 50%;
+  top: -30px;
+  width: 40%;
+  height: 60px;
+  font-size: 45px;
+  margin-left: -20%;
 }
