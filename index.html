@@ -29,6 +29,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   </head>
   <body>
+    <div class="loader">
+      <div class="inner"></div>
+    </div>
     <div id="slides">
       <div class="overlay"></div>
 
@@ -50,6 +53,42 @@
         <a href="#" class="prev"></a>
       </nav>
     </div>
+
+    <nav id="navigation" class="navbar navbar-expand-lg">
+      <a class="navbar-brand" href="#">Welcome</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#about"
+              >About<span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#stats">Stats</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#portfolio">Portfolio</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
     <div id="about" class="section">
       <div class="container">
@@ -153,7 +192,9 @@
                   <i class="fa fa-calendar-alt"></i>
                 </div>
                 <div class="square-content">
-                  <h2 class="counter">690</h2>
+                  <h2 class="counter">
+                    690
+                  </h2>
                   <h3>Days of coding</h3>
                 </div>
               </div>
@@ -167,7 +208,7 @@
                   <i class="fa fa-laptop"></i>
                 </div>
                 <div class="square-content">
-                  <h2 class="counter">5+</h2>
+                  <h2 class="counter">5</h2>
                   <h3>Web apps made</h3>
                 </div>
               </div>
@@ -195,7 +236,10 @@
                   <i class="fa fa-clock"></i>
                 </div>
                 <div class="square-content">
-                  <h2 class="counter">1200+</h2>
+                  <h2 class="counter">
+                    1200
+                  </h2>
+
                   <h3>Hours of study</h3>
                 </div>
               </div>
@@ -209,7 +253,21 @@
       <div class="col-md-12 text-center">
         <p class="subHeading">Like what you see?</p>
         <h2>I'd love to hear from you!</h2>
-        <a href="mailto:kosatun@aol.com" class="contactButton">GET IN TOUCH!</a>
+        <div class="col-md-12 contact-icons text-center">
+          <div class="github-icon">
+            <a href="https://github.com/kscali">
+              <img src="images/icons/github.png" alt="github-icon" />
+            </a>
+          </div>
+          <a href="mailto:kosatun@aol.com" class="contactButton"
+            >GET IN TOUCH!</a
+          >
+          <div class="linkedin-icon">
+            <a href="https://www.linkedin.com/in/koychian-saeteurn-98169a167/">
+              <img src="images/icons/linkedin.png" alt="linked-icon" />
+            </a>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -280,19 +338,16 @@
                   <div class="image-overlay"></div>
                 </div>
               </li>
-              <li onClick="" class="me col-xs-6 col-sm-4 col-md-3 col-lg-3">
+              <li onClick="" class="app col-xs-6 col-sm-4 col-md-3 col-lg-3">
                 <div class="item">
-                  <img
-                    src="images/thumbnails/instapix-thumbnail.png"
-                    alt="app"
-                  />
+                  <img src="images/thumbnails/music-thumbnail.png" alt="app" />
                   <div class="icons">
                     <a
-                      href="images/portfolio/instapix.png"
+                      href="images/music-full.png"
                       title="View Image"
                       class="open-btn"
                       data-fancybox
-                      data-caption="instapix"
+                      data-caption="Music Exposed"
                     >
                       <i class="fa fa-search"></i>
                     </a>

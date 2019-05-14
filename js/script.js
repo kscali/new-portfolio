@@ -1,3 +1,18 @@
+$(window).on("load", function() {
+  $(".loader .inner").fadeOut(500, function() {
+    $(".loader").fadeOut(750);
+  });
+
+  $(".items").isotope({
+    filter: "*",
+    animationOptions: {
+      duration: 1500,
+      easing: "linear",
+      queue: false
+    }
+  });
+});
+
 $(document).ready(function() {
   $("#slides").superslides({
     animation: "fade",
@@ -21,6 +36,7 @@ $(document).ready(function() {
   $(".owl-carousel").owlCarousel({
     loop: true,
     items: 4,
+    nav: true,
     responsive: {
       0: {
         items: 1
@@ -74,15 +90,6 @@ $(document).ready(function() {
 
   $("[data-fancybox]").fancybox();
 
-  $(".items").isotope({
-    filter: "*",
-    animationOptions: {
-      duration: 1500,
-      easing: "linear",
-      queue: false
-    }
-  });
-
   $("#filters a").click(function() {
     $("#filters .current").removeClass("current");
     $(this).addClass("current");
@@ -100,4 +107,32 @@ $(document).ready(function() {
 
     return false;
   });
+
+  $("#navigation li a").click(function(e) {
+    e.preventDefault();
+    let targetElement = $(this).attr("href");
+    let targetPostion = $(targetElement).offset().top;
+    $("html, body").animate(
+      {
+        scrollTop: targetPostion - 50
+      },
+      "slow"
+    );
+  });
+
+  const nav = $("#navigation");
+  const navTop = nav.offset().top;
+
+  $(window).on("scroll", stickyNavigation);
+
+  function stickyNavigation() {
+    const body = $("body");
+    if ($(window).scrollTop() >= navTop) {
+      body.css("padding-top", nav.outerHeight() + "px");
+      body.addClass("fixedNav");
+    } else {
+      body.removeClass("fixedNav");
+      body.css("padding-top", 0);
+    }
+  }
 });
